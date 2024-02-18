@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.section .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 220px;
+    z-index: 999;
+}
+
+.section .logo img {
+    width: 100%;
+}
+.section .img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    transition: 1s;
+}
+.section .img img{
+    width: 100%;
+}
+
+.section .Turn {
+    width: 67%;
+    height: 65px;
+    backdrop-filter: blur(6px);
+    box-shadow: -4px 4px 10px 1px rgba(0, 0, 0, 0.377);
+    margin: 0 auto;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 17px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fredoka One', cursive; 
+    font-size: 22px;
+    text-align: center;
+    line-height: 2ch;
+    color: #610035;
+    text-shadow: 1px 0px 1px white;
+    padding: 0 90px;
+}
+.section .Turn .next {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 7px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    border: 20px white solid;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: translateY(-50%);
+    transition: 0.7s;
+    animation-name: next;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-direction: alternate-reverse;
+}
+@keyframes next {
+    0% {
+        scale: 0.9;
+        border-left:  30px white solid;
+    }
+    100% {
+        scale:1;
+        border-left:  30px #f9ccff solid;
+    }
+}
+.section .Turn .next:hover {
+    border-left:  30px #34edf3 solid;
+}
+
+.section .Turn .before {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 7px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    border: 20px white solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: translateY(-50%);
+    transition: 0.7s;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.section .Turn .before:hover {
+    border-right-color: purple;
+}
+
+.section .img .text-yahia {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.section .img1:hover .text-yahia {
+    animation-name: text;
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+@keyframes text {
+    0% {
+        top: 0;
+        transform: translate(-50%, -100%);
+    }
+    50% {
+        top: 100%;
+    }
+    100% {
+        top: 40%;
+        transform: translate(-50%, -30%);
+}
+}
+.section .img .boy{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-40%);
+}
